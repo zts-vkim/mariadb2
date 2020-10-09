@@ -1,3 +1,2 @@
 # rhacm-demo
-
-Demo MariaDB app for RHACM
+A MariaDB demo for RHACM article
