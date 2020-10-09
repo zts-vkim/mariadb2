@@ -5,8 +5,8 @@ metadata:
   name: mariadb-app
   namespace: mariadb
 spec:
-  type: GitHub
-  pathname: https://github.com/michaelkotelnikov/rhacm-demo.git
+  type: GitLab
+  pathname: https://gitlab.com/michael.kot/rhacm-demo.git
 ---
 apiVersion: app.k8s.io/v1beta1
 kind: Application
