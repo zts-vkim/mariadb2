@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: rhscl/mariadb-102-rhel7
+          image: quay.io/bitnami/mariadb:10.4.17
           ports:
             - containerPort: 3306
               name: db-port
           env:
-            - name: MYSQL_ROOT_PASSWORD
+            - name: MARIADB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mariadb
