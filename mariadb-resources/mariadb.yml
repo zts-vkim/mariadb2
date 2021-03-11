@@ -6,7 +6,7 @@ metadata:
     app: mariadb
     type: database
 spec:
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: quay.io/bitnami/mariadb:latest
+          image: quay.io/bitnami/mariadb:10.2.17
           ports:
             - containerPort: 3306
               name: db-port
