@@ -12,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 3306
   selector:
-    deploymentconfig: mariadb
+    app: mariadb
   sessionAffinity: None
   type: ClusterIP
