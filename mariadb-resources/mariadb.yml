@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: zts-claim
+  name: zts-claim1
   namespace: mariadb
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: manual
+  storageClassName: gp2 
   resources:
     requests:
 storage: 100Mi
@@ -48,4 +48,4 @@ spec:
     volumes:
     - name: existingvolumename
       persistentVolumeClaim:
-      claimName: zts-claim
+      claimName: zts-claim1
