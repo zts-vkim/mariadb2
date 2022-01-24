@@ -44,8 +44,8 @@ spec:
                   key: MYSQL_ROOT_PASSWORD
           volumeMounts:
           - name: existingvolumename
-          mountPath: "/mnt/data"
+            mountPath: "/mnt/data"
     volumes:
     - name: existingvolumename
       persistentVolumeClaim:
-      claimName: zts-claim1
+        claimName: zts-claim1
