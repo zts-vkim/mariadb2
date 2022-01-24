@@ -45,7 +45,7 @@ spec:
           volumeMounts:
           - name: existingvolumename
             mountPath: "/mnt/data"
-    volumes:
-    - name: existingvolumename
-      persistentVolumeClaim:
-        claimName: zts-claim1
+      volumes:
+      - name: existingvolumename
+        persistentVolumeClaim:
+          claimName: zts-claim1
