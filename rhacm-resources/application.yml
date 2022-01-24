@@ -11,12 +11,12 @@ metadata:
   namespace: mariadb
 spec:
   type: Git
-  pathname: https://gitlab.com/michael.kot/rhacm-demo.git
+  pathname: https://github.com/mahesh-zetta/rhacm-demo.git 
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: dev-clusters
+  name: ocp46-acm-openshift2 
   namespace: mariadb
 spec:
   clusterConditions:
@@ -40,7 +40,7 @@ spec:
   placement:
     placementRef:
       kind: PlacementRule
-      name: dev-clusters
+      name: ocp46-acm-openshift2
 ---
 apiVersion: app.k8s.io/v1beta1
 kind: Application
