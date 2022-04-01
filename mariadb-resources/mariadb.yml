@@ -31,7 +31,7 @@ spec:
         type: database
     spec:
       containers:
-        - name: mariadb2
+        - name: mariadb
           image: quay.io/bitnami/mariadb:10.3
           ports:
             - containerPort: 3306
