@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: zts-claim1
-  namespace: mariadb
+  name: zts-claim2
+  namespace: mariadb2
 spec:
   accessModes:
     - ReadWriteOnce
@@ -15,23 +15,23 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mariadb
+  name: mariadb2
   labels:
-    app: mariadb
+    app: mariadb2
     type: database
 spec:
   selector:
     matchLabels:
-      app: mariadb
+      app: mariadb2
   replicas: 1
   template:
     metadata:
       labels:
-        app: mariadb
+        app: mariadb2
         type: database
     spec:
       containers:
-        - name: mariadb
+        - name: mariadb2
           image: quay.io/bitnami/mariadb:10.3
           ports:
             - containerPort: 3306
@@ -48,4 +48,4 @@ spec:
       volumes:
       - name: existingvolumename
         persistentVolumeClaim:
-          claimName: zts-claim1
+          claimName: zts-claim2
