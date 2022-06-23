@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: bitnami/mariadb:latest
+          image: mariadb:10.3
           ports:
             - containerPort: 3306
               name: db-port
