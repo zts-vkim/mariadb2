@@ -7,10 +7,23 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: gp2 
+  storageClassName: zts-sc 
   resources:
     requests:
-      storage: 100Mi
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: zts-claim3
+  namespace: mariadb2
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: zts-sc 
+  resources:
+    requests:
+      storage: 1Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -32,7 +45,7 @@ spec:
     spec:
       containers:
         - name: mariadb2
-          image: quay.io/bitnami/mariadb:10.3
+          image: bitnami/mariadb:latest
           ports:
             - containerPort: 3306
               name: db-port
