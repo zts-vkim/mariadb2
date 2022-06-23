@@ -10,7 +10,7 @@ spec:
   storageClassName: zts-sc 
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
